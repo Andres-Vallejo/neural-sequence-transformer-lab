@@ -1,6 +1,5 @@
-,account_access,billing,cancellation,plan_change,technical_issue
-account_access,0,0,0,1,0
-billing,0,0,1,1,0
-cancellation,1,0,0,0,0
-plan_change,0,0,1,0,0
-technical_issue,0,0,0,0,1
+,business,science_technology,sports,world
+business,194,31,2,18
+science_technology,32,229,6,10
+sports,2,13,212,15
+world,13,11,13,199
