@@ -19,7 +19,7 @@ def main():
     inv_labels = {idx: label for label, idx in label_map.items()}
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = build_model(args.model, len(vocab.itos), len(label_map), cfg["data"]["max_length"], cfg["models"][args.model]).to(device)
-    checkpoint = torch.load(Path(cfg["outputs"]["checkpoint_dir"]) / f"{args.model}_best.pt", map_location=device)
+    checkpoint = torch.load(Path(cfg["outputs"]["checkpoint_dir"]) / f"{args.model}_best.pt", map_location=device, weights_only=False)
     model.load_state_dict(checkpoint["model_state"])
     model.eval()
     y_true, y_pred = [], []
