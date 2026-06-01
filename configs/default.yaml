@@ -13,10 +13,18 @@ data:
   max_val_samples: 1000
   max_test_samples: 1000
 training:
-  epochs: 3
+  epochs: 25
   learning_rate: 0.001
   weight_decay: 0.0001
   device: auto
+  optimizer: adam
+  scheduler:
+    factor: 0.5
+    patience: 2
+  early_stopping:
+    monitor: val_acc
+    patience: 5
+    min_delta: 0.001
 models:
   embedding:
     embed_dim: 96

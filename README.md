@@ -32,13 +32,13 @@ A media analytics team needs to route incoming news stories into topical desks s
 
 ```bash
 pip install -r requirements.txt
-python src/train.py --model embedding --epochs 3
-python src/train.py --model bilstm --epochs 3
-python src/train.py --model transformer --epochs 3
-python src/train.py --model autoencoder --epochs 3
+python src/train.py --model embedding --epochs 25
+python src/train.py --model bilstm --epochs 25
+python src/train.py --model transformer --epochs 25
+python src/train.py --model autoencoder --epochs 25
 python src/evaluate.py --model transformer
 ```
 
 ## Skills Demonstrated
 
-Text preprocessing, vocabulary encoding, neural encoders, recurrent models, autoencoders, Transformer encoders, PyTorch training loops, evaluation, and model documentation.
+Text preprocessing, vocabulary encoding, neural encoders, recurrent models, autoencoders, Transformer encoders, Adam optimization, early stopping, PyTorch training loops, evaluation, and model documentation.
