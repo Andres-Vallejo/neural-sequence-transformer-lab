@@ -1,0 +1,33 @@
+seed: 42
+data:
+  path: data/support_tickets.csv
+  text_column: message
+  label_column: intent
+  max_length: 48
+  batch_size: 16
+training:
+  epochs: 10
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  device: auto
+models:
+  embedding:
+    embed_dim: 96
+  bilstm:
+    embed_dim: 96
+    hidden_dim: 128
+    num_layers: 2
+    dropout: 0.2
+  autoencoder:
+    embed_dim: 96
+    hidden_dim: 128
+    latent_dim: 96
+  transformer:
+    embed_dim: 128
+    depth: 3
+    num_heads: 4
+    mlp_dim: 256
+    dropout: 0.1
+outputs:
+  checkpoint_dir: outputs/checkpoints
+  metrics_dir: outputs/metrics
