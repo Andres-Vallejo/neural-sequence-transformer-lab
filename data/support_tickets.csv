@@ -1,0 +1,31 @@
+ticket_id,message,intent,urgency
+T001,my invoice has an incorrect charge and i need a refund,billing,high
+T002,i cannot log into my account after resetting the password,account_access,high
+T003,the app crashes every time i upload a photo,technical_issue,high
+T004,how do i change my subscription plan,plan_change,medium
+T005,i want to cancel my subscription before next billing,cancellation,high
+T006,where can i download my receipts,billing,low
+T007,the dashboard is loading very slowly today,technical_issue,medium
+T008,please update the email address on my account,account_access,medium
+T009,i need help upgrading from basic to premium,plan_change,medium
+T010,the payment failed but my card is valid,billing,high
+T011,i forgot my password and cannot access two factor authentication,account_access,high
+T012,video export gets stuck at ninety percent,technical_issue,high
+T013,can i pause my subscription for two months,cancellation,medium
+T014,what features are included in the enterprise plan,plan_change,low
+T015,i was charged twice this month,billing,high
+T016,my teammate cannot accept the workspace invite,account_access,medium
+T017,the mobile app freezes on the login screen,technical_issue,high
+T018,please cancel my renewal immediately,cancellation,high
+T019,can i switch from monthly to annual billing,plan_change,medium
+T020,i need a copy of last quarter invoices,billing,low
+T021,my account says suspended but payment is complete,account_access,high
+T022,notifications are not being delivered to users,technical_issue,medium
+T023,i want to downgrade because my team is smaller now,plan_change,medium
+T024,delete my account and stop all future charges,cancellation,high
+T025,the report numbers do not match the export,technical_issue,medium
+T026,how do i add more seats to my plan,plan_change,low
+T027,refund the charge for the cancelled account,billing,high
+T028,i cannot verify my login code,account_access,high
+T029,the image classifier endpoint returns timeout errors,technical_issue,high
+T030,i am considering cancelling unless pricing changes,cancellation,medium
