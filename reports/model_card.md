@@ -2,11 +2,11 @@
 
 ## Intended Use
 
-Educational and portfolio demonstration of neural sequence models for customer support ticket triage.
+Educational and portfolio demonstration of neural sequence models for news topic classification.
 
 ## Dataset
 
-Synthetic support messages labeled by intent and urgency. The dataset is intentionally small so the full code is easy to inspect; production use would require thousands of labeled examples.
+The default pipeline downloads the public AG News CSV dataset, maps the four labeled classes, and creates reproducible train, validation, and test loaders. The configuration caps sample counts so the GitHub Actions training job stays practical while preserving a real labeled data workflow.
 
 ## Architectures
 
@@ -17,11 +17,11 @@ Synthetic support messages labeled by intent and urgency. The dataset is intenti
 
 ## Evaluation
 
-The evaluation script exports classification report and confusion matrix CSV files. For production, add calibration, drift monitoring, and human review for low-confidence predictions.
+The evaluation script exports classification report and confusion matrix CSV files from the held-out test split. For production, add calibration, drift monitoring, and human review for low-confidence predictions.
 
 ## Suggested Experiments
 
-- Compare embedding, BiLSTM, and transformer validation accuracy.
+- Compare embedding, BiLSTM, and transformer test accuracy.
 - Pretrain the autoencoder and transfer encoder representations.
-- Add urgency as a second classification head for multi-task learning.
+- Increase max_train_samples and train longer for higher benchmark accuracy.
 - Replace the custom tokenizer with a pretrained tokenizer and fine-tune a Hugging Face model.

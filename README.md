@@ -1,6 +1,6 @@
 # Neural Sequence Transformer Lab
 
-Deep learning portfolio project for sequence modeling and NLP. The project classifies customer support messages using multiple neural architectures:
+Deep learning portfolio project for sequence modeling and NLP. The project downloads the public AG News dataset, creates reproducible train/validation/test splits, and classifies news stories using multiple neural architectures:
 
 1. EmbeddingBag baseline for fast text classification.
 2. BiLSTM encoder for contextual sequence representation.
@@ -9,7 +9,7 @@ Deep learning portfolio project for sequence modeling and NLP. The project class
 
 ## Executive Scenario
 
-A support operations team needs to route incoming tickets by intent and urgency. This repository demonstrates how neural sequence models can convert raw text into actionable labels for triage automation.
+A media analytics team needs to route incoming news stories into topical desks such as world, sports, business, and science/technology. This repository demonstrates how neural sequence models can convert raw text into actionable labels for editorial triage automation.
 
 ## Models Included
 
@@ -20,9 +20,9 @@ A support operations team needs to route incoming tickets by intent and urgency.
 
 ## Repository Structure
 
-- data/support_tickets.csv: synthetic labeled support messages.
+- data/raw: downloaded AG News train/test CSV files, ignored by git.
 - configs/default.yaml: training configuration.
-- src/dataset.py: tokenizer, vocabulary, dataset, dataloaders.
+- src/dataset.py: AG News downloader, tokenizer, vocabulary, dataset, dataloaders, and train/validation/test splitting.
 - src/models.py: neural architectures.
 - src/train.py: training loop for classification and autoencoder objectives.
 - src/evaluate.py: metrics export.
@@ -30,12 +30,14 @@ A support operations team needs to route incoming tickets by intent and urgency.
 
 ## Quick Start
 
+```bash
 pip install -r requirements.txt
-python src/train.py --model embedding --epochs 10
-python src/train.py --model bilstm --epochs 10
-python src/train.py --model transformer --epochs 10
-python src/train.py --model autoencoder --epochs 10
+python src/train.py --model embedding --epochs 3
+python src/train.py --model bilstm --epochs 3
+python src/train.py --model transformer --epochs 3
+python src/train.py --model autoencoder --epochs 3
 python src/evaluate.py --model transformer
+```
 
 ## Skills Demonstrated
 

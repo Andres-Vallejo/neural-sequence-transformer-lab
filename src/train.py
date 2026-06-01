@@ -68,7 +68,7 @@ def main():
     args = parser.parse_args()
     cfg = yaml.safe_load(Path(args.config).read_text())
     set_seed(cfg["seed"])
-    train_loader, val_loader, vocab, label_map = get_dataloaders(**cfg["data"])
+    train_loader, val_loader, _, vocab, label_map = get_dataloaders(**cfg["data"])
     device = device_from_config(cfg["training"].get("device", "auto"))
     model = build_model(args.model, len(vocab.itos), len(label_map), cfg["data"]["max_length"], cfg["models"][args.model]).to(device)
     autoencoder = args.model == "autoencoder"
